@@ -36,20 +36,18 @@ fun main() {
         )
 
         print("Seleccionar opción: ")
-        val opc = scanner.nextInt()
+        var opc = scanner.nextInt()
 
         when (opc) {
             1 ->
-            {
-
-                for (i in 1..2) {
+            {       for (i in 1..2) {
                     println("Ingresa tu código de empleado:")
                     val codigoEmpleado = scanner.nextInt()
 
                     if (codigoEmpleado in 1000..1999) {
                         println("El código del empleado es: ${codigoEmpleado} ¡Bienvenido}!")
-                        intentosfallidos = 0 // Reiniciar intentos fallidos
-                        break // Salir del bucle si el código es correcto
+                        intentosfallidos = 0
+                        break
                     } else {
                         intentosfallidos++
                         intentosRealizados++
@@ -86,7 +84,7 @@ fun main() {
                     print("Motivo de la visita: ")
                     val motivoVisita = scanner.nextLine()
 
-                    println("Registro exitoso. Bienvenido, ${nombreVisitante}")
+                    println("Registro exitoso. Bienvenido, ${nombreVisitante} tu visita se da por:  ${motivoVisita} ")
 
                 } else {
                     intentosfallidos++
